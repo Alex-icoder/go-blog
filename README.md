@@ -1,8 +1,6 @@
 # 个人博客系统后端
 这是一个使用Go语言、Gin框架和GORM框架开发的个人博客系统后端，支持用户认证、文章管理和评论功能。
-***
 ## 功能特性
-***
 - 用户注册与登录
 - JWT用户认证与授权
 - 文章管理功能的增删改查 (CRUD)
@@ -11,7 +9,6 @@
 - 统一的错误处理
 - RESTful API 设计
 ## 技术栈
-***
 - 语言: Go 1.24
 - Web框架: Gin
 - ORM框架: GORM 
@@ -19,7 +16,6 @@
 - 认证: JWT
 - 密码加密:bcrypt
 ## 项目结构
-***
 ```markdown
 go-blog/
 ├── base/            # 公共基础包
@@ -35,7 +31,6 @@ go-blog/
 └── README.md        # 项目说明
 ```
 ## 数据库表结构
-***
 ### users表
   - id - 主键
   - username - 用户名（唯一）
@@ -61,7 +56,6 @@ go-blog/
 - updated_at - 更新时间
 - deleted_at - 删除时间
 ## 安装与运行
-***
 ### 环境要求
 - Go 1.20+
 - Mysql 5.7+
@@ -87,7 +81,6 @@ Dsn = "root:root@admin123@tcp(127.0.0.1:3306)/blog?charset=utf8&parseTime=True&l
 - DSN: 数据库连接字符串
 - JwtSecretKey: JWT 签名密钥
 - Port: 服务器端口
-
 如果不设置指定环境，将使用默认环境dev配置。
 ## 运行项目
 ```sql
@@ -123,7 +116,6 @@ go build -o go-blog -tags="dev" #指定环境配置
 - 用户只能操作自己的文章
 - CORS 支持
 ## API接口
-***
 ### 用户认证与授权
 - 用户注册
 ```
@@ -195,7 +187,6 @@ Content-Type: application/json
 GET /v1/comment/find?postId=1
 ```
 ## 测试用例
-***
 ### 使用curl进行测试
 - 用户注册
 ```
